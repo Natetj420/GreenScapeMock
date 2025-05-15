@@ -7,3 +7,17 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* global.css or tailwind.css */
+@layer utilities {
+  .logo-mask {
+    /* use the SVG as a mask */
+    -webkit-mask: url("/assets/images/GreenscapeLogo.svg") no-repeat center;
+            mask: url("/assets/images/GreenscapeLogo.svg") no-repeat center;
+    -webkit-mask-size: contain;
+            mask-size: contain;
+    background-color: #064e3b;   /* fill-color for your logo */
+    width: 2.5rem;                /* match your desired h-10 (2.5rem) */
+    height: 2.5rem;
+  }
+}
