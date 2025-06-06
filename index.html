@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My App</title>
-    <link
-  rel="preload"
-  as="image"
-  href="/assets/images/Landscapehero.jpg"
-  imagesrcset="/assets/images/Landscapehero-480w.webp 480w,
-                /assets/images/Landscapehero-960w.webp 960w,
-                /assets/images/Landscapehero-1920w.webp 1920w"
-  imagesizes="100vw"
-/>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greenscape</title>
+
+  <!-- Preload hero image for fast LCP -->
+  <link rel="preload"
+        as="image"
+        href="/assets/images/Landscapehero-1920w.webp"
+        type="image/webp"
+        imagesrcset="/assets/images/Landscapehero-480w.webp 480w,
+                    /assets/images/Landscapehero-960w.webp 960w,
+                    /assets/images/Landscapehero-1920w.webp 1920w"
+        imagesizes="100vw"
+        fetchpriority="high">
+  
+  <!-- Critical nav CSS could go here -->
+  <style>
+    /* .nav-shell { … } */
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
