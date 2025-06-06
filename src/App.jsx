@@ -86,7 +86,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         className="relative h-[90vh] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/images/Landscapehero.jpg')" }}
+        style={{ backgroundImage: "url('/assets/images/Landscapehero.webp')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-green-900/40 z-0" />
         <motion.div
@@ -144,7 +144,8 @@ export default function Home() {
       {/* About Brief */}
       <section
         className="relative bg-cover bg-center py-28 px-6 text-white"
-        style={{ backgroundImage: "url('/assets/images/Landscapehero.jpg')" }}
+      style={{ backgroundImage: "url('/assets/images/Landscapeabout.webp')" }}
+
       >
         <div className="absolute inset-0 bg-black/50 z-0" />
         <motion.div
