@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Greenscape</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Preload hero image for fast LCP -->
-  <link rel="preload"
-        as="image"
-        href="/assets/images/Landscapehero-1920w.webp"
-        type="image/webp"
-        imagesrcset="/assets/images/Landscapehero-480w.webp 480w,
-                    /assets/images/Landscapehero-960w.webp 960w,
-                    /assets/images/Landscapehero-1920w.webp 1920w"
-        imagesizes="100vw"
-        fetchpriority="high">
-  
-  <!-- Critical nav CSS could go here -->
-  <style>
-    /* .nav-shell { … } */
-  </style>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <title>Maple Summit Landscape</title>
+
+    <meta
+      name="description"
+      content="Maple Summit Landscape provides landscaping, hedge care, planting, garden improvements and outdoor projects in South Surrey, Langley and surrounding Lower Mainland communities."
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/MapleSummit-Hero.png"
+    />
+  </head>
+
+  <body>
+    <!-- Hidden form used by Netlify to detect the React form at build time -->
+    <form
+      name="estimate-request"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="estimate-request" />
+
+      <input name="bot-field" />
+
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="service" />
+      <textarea name="message"></textarea>
+      <input type="text" name="location" />
+    </form>
+
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
